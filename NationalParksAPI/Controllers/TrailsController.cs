@@ -11,8 +11,9 @@ using System.Threading.Tasks;
 
 namespace NationalParksAPI.Controllers
 {
-    [Route("api/Trails")]
+    [Route("api/v{version:apiVersion}/trails")]
     [ApiController]
+    //[ApiExplorerSettings(GroupName = "TrailsRegistryV1")]
     public class TrailsController : Controller
     {
         

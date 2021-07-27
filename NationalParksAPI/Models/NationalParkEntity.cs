@@ -15,6 +15,8 @@ namespace NationalParksAPI.Models
         [Required]
         public string state { get; set; }
         public DateTime CreatedAt { get; set; }
+        public byte[] picture { get; set; }
+
         public DateTime Eistablished { get; set; }
     }
 }

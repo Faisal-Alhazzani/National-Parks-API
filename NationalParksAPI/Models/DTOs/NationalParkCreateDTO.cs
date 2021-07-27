@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace NationalParksAPI.Models.DTOs
 {
-    public class NationalParkDTO
+    public class NationalParkCreateDTO
     {
-        public int Id { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]
         public string state { get; set; }
         public byte[] picture { get; set; }
-
         public DateTime CreatedAt { get; set; }
         public DateTime Eistablished { get; set; }
     }

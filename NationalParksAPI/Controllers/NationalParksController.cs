@@ -12,8 +12,9 @@ using System.Threading.Tasks;
 
 namespace NationalParksAPI.Controllers
 {
-    [Route("api/NationalParks")]
+    [Route("api/v{version:apiVersion}/nationalparks")]
     [ApiController]
+    //[ApiExplorerSettings(GroupName = "NationalParkRegistryV1")]
     public class NationalParksController : Controller
     {
         private readonly INationalParkRepository _npRepo;
@@ -66,10 +67,10 @@ namespace NationalParksAPI.Controllers
         }
 
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status200OK , Type = typeof(NationalParkDTO))]
+        [ProducesResponseType(StatusCodes.Status200OK , Type = typeof(NationalParkCreateDTO))]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [ProducesDefaultResponseType]
-        public IActionResult CreateNationalPark([FromBody] NationalParkDTO parkDTO)
+        public IActionResult CreateNationalPark([FromBody] NationalParkCreateDTO parkDTO)
         {
             if (parkDTO == null)
             {
@@ -91,7 +92,7 @@ namespace NationalParksAPI.Controllers
                 ModelState.AddModelError("", $"Something went wrong! The park {parkDTO.Name} could not be added");
                 return StatusCode(422, ModelState);
             }
-            return Ok(_parksMapper.Map<NationalParkDTO>(DbObj));
+            return Ok(_parksMapper.Map<NationalParkCreateDTO>(DbObj));
         }
 
         [HttpPatch("{ParkId}")]
