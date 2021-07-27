@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NationalParksAPI</name>
+    </assembly>
+    <members>
+        <member name="M:NationalParksAPI.Controllers.NationalParksController.GetNationalParks">
+            <summary>
+            Get list of national parks
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NationalParksAPI.Controllers.NationalParksController.GetNationalPark(System.Int32)">
+            <summary>
+            Get individual national park
+            </summary>
+            <param name="id">The id of the national park</param>
+            <returns></returns>
+        </member>
+        <member name="M:NationalParksAPI.Controllers.TrailsController.GetTrails">
+            <summary>
+            Get list of trails
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NationalParksAPI.Controllers.TrailsController.GetTrail(System.Int32)">
+            <summary>
+            Get individual trail by trail id
+            </summary>
+            <param name="id">The id of the national park</param>
+            <returns></returns>
+        </member>
+        <member name="M:NationalParksAPI.Controllers.TrailsController.CreateTrail(NationalParksAPI.Models.DTOs.TrailCreateDTO)">
+            <summary>
+            Add new trail to the system
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NationalParksAPI.Controllers.TrailsController.UpdateTrail(System.Int32,NationalParksAPI.Models.DTOs.TrailUpdateDTO)">
+            <summary>
+            Update existing trail by trail id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NationalParksAPI.Controllers.TrailsController.DeleteTrail(System.Int32)">
+            <summary>
+            Deletes trail by id
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
